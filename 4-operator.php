@@ -39,4 +39,9 @@ var_dump(true xor false);
 
 var_dump(!true);
 var_dump(!false);
+// operator increment dan decrement 
+$a = 19; 
+$b = $a++;
+var_dump($b);
+var_dump($a)
 ?>
