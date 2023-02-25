@@ -30,5 +30,18 @@
         echo "Nilai anda E";
      endif;
 
-    
+    echo "<br>";
+    $Hasil = "B";
+    switch ($Hasil){
+        case "A":
+            echo "Anda lulus dengan sangat bagus";
+            break;
+        case "B";
+            echo "Anda lulus dengan baik";
+            break;
+        case "C";
+            echo "Anda cukup";
+        default:
+            echo "Anda tidak lulus";
+    }
 ?>
