@@ -17,4 +17,14 @@
             echo $b , "<br>";
         endif;
      endfor;
+
+    $value = 1;
+    while ($value <= 10) :
+        if($value % 2 == 1):
+            echo "$value adalah bilangan ganjil". "<br>";
+        else :
+            echo "$value adalah bilangan genap". "<br>";
+        endif;
+        $value++;
+    endwhile;
 ?>
