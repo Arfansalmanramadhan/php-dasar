@@ -33,4 +33,23 @@
         echo $valuee;
         $valuee++;
     } while($valuee <= 10);
+    echo "<br>";
+    $nama = ["Arfan", "Salman", "Ramadhan"];
+    
+    for($a = 0; $a < count($nama); $a++) :
+        echo "  data ke $a = $nama[$a]";
+    endfor;
+    echo "<br>";
+    foreach ($nama as $namas){
+        echo "Data $namas ";
+    };
+    echo "<br>";
+    $Orang = [
+        "namaDepan" => "Arfan",
+        "namaTengah" => "Salman",
+        "namaBelakang" => "Ramadhan"
+    ];
+    foreach ($Orang as $kunci => $hasil) {
+        echo "$kunci : $hasil ";
+    }
 ?>
