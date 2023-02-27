@@ -27,4 +27,10 @@
         endif;
         $value++;
     endwhile;
+
+    $valuee = 1;
+    do {
+        echo $valuee;
+        $valuee++;
+    } while($valuee <= 10);
 ?>
