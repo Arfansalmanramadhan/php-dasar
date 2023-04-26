@@ -76,5 +76,55 @@ function hasilnilai(int $nilai, int $absen): string {
         return "E";
     }
 }
-var_dump(hasilnilai(61,100))
+var_dump(hasilnilai(61,100));
+// Variabel function
+echo "<br>";
+function awal(string $nama, $tes){
+    $namaa = $tes($nama);
+    echo "Halo $namaa";
+}
+function aku(string $nama): string {
+    return "sampai $nama";
+}
+awal("Arfan", "strtolower");
+echo "<br>";
+// anonymous function 
+$halo = function (string $nama){
+    echo "Halo $nama";
+};
+$halo("arfan");
+echo "<br>";
+function selamatTinggal(string $nama, $filter){
+    $akhir = $filter($nama);
+    echo "Selamat tinggal $akhir";
+}
+selamatTinggal("anggi", function (string $nama): string {
+    return strtoupper($nama);
+});
+$function = function (string $nama): string {
+    return strtoupper($nama);
+};
+selamatTinggal("Arfan", $function);
+echo "<br>";
+$namaDepan ="Arfan";
+$namaBelakang = "Salman";
+$haloArfan = function () use ($namaDepan, $namaBelakang){
+    echo "Halo $namaDepan $namaBelakang";
+};
+$haloArfan();
+// arrow Function
+$arrow = fn() => "Halo $namaDepan $namaBelakang";
+echo $arrow();
+// collback function 
+function Arfan(string $nama, callable $filter){
+    $akhir = call_user_func($filter, $nama);
+    echo "Halo $akhir";
+}
+Arfan("arfan", "strtoupper");
+echo "<br>";
+Arfan("arfan", function (string $nama): string {
+    return strtolower($nama);
+});
+echo "<br>";
+echo Arfan("Arfan", fn($nama) => strtoupper($nama));
 ?>
